@@ -1,0 +1,165 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Customers Segmentation</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: Personal - v2.2.0
+    * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+  
+  <body data-gr-c-s-loaded="true">
+  
+  <!-- ======= Portfolio Details ======= -->
+    <main id="main">
+      <div id="portfolio-details" class="portfolio-details">
+        <div class="container">
+  
+          <div class="row">
+  
+            <div class="col-lg-12 portfolio-info">
+              <br>
+              <h2 style="color:#12d640">Customers Segmentation Report</h2>
+              <ul>
+                <li><strong>Tech Stack</strong>: R, Rmarkdown, K-means Algorithm</li>
+                <li><strong>Full markdown Report</strong>: <a href="https://github.com/PiusBe/HR-Dashboard.git" target="_blank">Click here</a></li>
+                <li><strong>Github Link</strong>: <a href="https://github.com/PiusBe/HR-Dashboard.git" target="_blank">Click here</a></li>
+              </ul>
+  
+                <strong><h3>1. Introduction</h3></strong>  
+                <p>
+                  In today's competitive business landscape, understanding diverse customer needs is vital. Lacking insights hinders targeted marketing, customer satisfaction, and resource allocation. To address this, effective customer segmentation frameworks are essential. This report presents findings from a project aiming to identify distinct customer segments using advanced statistical techniques. Tailoring marketing efforts based on these segments can enhance understanding, drive informed decisions, and foster business growth in the dynamic market.
+
+                </p>  
+                <strong><h3>2. Problem Statement</h3></strong>
+                <p>
+                  Many companies struggle with understanding their diverse customer base, leading to the use of generic marketing strategies and suboptimal customer satisfaction. To address this challenge, this project focuses on developing an effective customer segmentation framework using the K-means clustering algorithm to identify and target specific customer groups with tailored marketing initiatives.
+                </p>  
+                <strong><h3>3. Data Wrangling and Preprocessing</h3></strong> 
+                <p>
+                  The customer data was sourced from Kaggle and contained information on customer ID, gender, age, annual income, and spending score.
+                   Before Analysis I perfomed the following tasks; 
+                   <br>
+                   <b>Handling Missing Values: </b>Imputed the data points using the mean. 
+                   <br>
+                   <b>Removing Duplicates: </b>Eliminated duplicate records to maintain data integrity. 
+                   <br>
+                    <b>Data Type Editing: </b>Adjusted data types for consistency and accuracy. Encoded categorical variables and formatted numerical values.
+                    <br>
+                    I also performed some basic data summary statistics to gain insights into the age, annual income, and spending score distributions.
+                </p> 
+                <strong><h3>4. Data Analysis and Visualization</h3></strong>
+                <p>
+                  Various visualizations were used to gain insights into the customer data. <br>
+                  Firstly, I analyzed the gender distribution using bar plot and pie chart. It was observed that the majority of customers were females, accounting for 56% of the dataset.
+
+                  <br>
+                    <b>Barplot</b> <br>
+                  <img src="C:\Users\Pius\OneDrive\Desktop\Portfolio Website\assets\img\project\segmentation_barplot.png" class="img-fluid" alt="">
+                  <br> <br>
+                  <b>PieChart</b> <br>
+                  <img src="C:\Users\Pius\OneDrive\Desktop\Portfolio Website\assets\img\project\segmentation_piechart.png" class="img-fluid" alt="">
+                  <br>
+                  <br>
+                  Next, I visualized the age distribution using a histogram. It revealed that the highest frequency of customers was between 30 and 35 years old.
+                  <br>
+                  <b>Histogram for Age Distribution</b> <br>
+                  <img src="C:\Users\Pius\OneDrive\Desktop\Portfolio Website\assets\img\project\segmentation_histogram.png" class="img-fluid" alt="">
+                  <br> <br>
+                  For the annual income analysis, I used a histogram and a density plot to understand the distribution. It was found that the average income of all customers in the dataset was approximately $60,560.
+                  <br>
+                  <b>Histogram for Annual Income</b> <br>
+                  <img src="C:\Users\Pius\OneDrive\Desktop\Portfolio Website\assets\img\project\segmentation_histogram2.png" class="img-fluid" alt="">
+                  <br> <br>
+                  <b>Density Plot for Annual Income</b> <br>
+                  <img src="C:\Users\Pius\OneDrive\Desktop\Portfolio Website\assets\img\project\segmentation_densityplot.png" class="img-fluid" alt="">
+                  <br> <br>
+                  Lastly, I also used a histogram to analyze the spending score distribution, revealing that the majority of customers clustered around the median spending score of 50.00.
+                  <br>
+                  <b>Histogram for Annual Expenditure</b>
+                  <br>
+                  <img src="C:\Users\Pius\OneDrive\Desktop\Portfolio Website\assets\img\project\segmentation_histogram3.png" class="img-fluid" alt="">
+
+                  <br>
+                  <br>
+                  <strong><h4>K-Means Algorithm</h4></strong>
+                  <p>
+                  To segment the customers, I applied the K-means clustering algorithm. The optimal number of clusters was determined by evaluating the total intra-cluster sum of squares (ISS) and using silhouette plots. The K-means algorithm successfully created six distinct clusters, each with unique characteristics. NB: <mark> <B>I have provided the silhouette plots in my rmarkdown report</B></mark>
+                  <br>
+                  To visualize the clustering results, I used principal component analysis (PCA) to reduce the dimensions of the data and plot the clusters in a 2D space. The visualization showed how the customers were grouped into six clusters based on their income and spending patterns.
+                  <br>
+                  <img src="C:\Users\Pius\OneDrive\Desktop\Portfolio Website\assets\img\project\segmentation_final.png" class="img-fluid" alt="">
+
+                  <br> <br>
+
+                </p>
+
+                <strong><h3>5. Conclusions</h3></strong>
+                <p>
+                  The customer segmentation project demonstrated the effectiveness of using the K-means clustering algorithm to divide the customer base into distinct groups based on income and spending patterns. By understanding customer segments, businesses can implement targeted marketing strategies and make more informed decisions. 
+                </p>
+                <strong><h3>6. Recommendations</h3></strong>
+                <p>
+                  <ul>
+                    <li><b>Continuously Monitor and Update Segmentation: </b>Customer preferences and behaviors evolve over time, so it's essential to regularly reevaluate the customer segmentation framework. Keep track of changing trends and adjust the segmentation criteria to stay relevant and effective in targeting customer needs.</li>
+                    <li><b>Personalize Marketing Strategies: </b>Tailor marketing initiatives for each customer segment based on their distinct characteristics and preferences. Utilize data-driven insights to create personalized offers, promotions, and communication channels that resonate with different customer groups.</li>
+                    <li><b>Customer Feedback and Surveys: </b>Regularly collect customer feedback and conduct surveys to understand their needs, expectations, and satisfaction levels. This direct input from customers provides valuable insights for refining the segmentation approach and enhancing overall customer experience.</li>
+                    <li><b>Customer Retention Strategies: </b>Develop targeted customer retention strategies for high-value segments to reduce churn and increase loyalty. Engaging loyal customers with exclusive offers and rewards can foster long-term relationships.</li>
+                    
+                  </ul>
+                </p>
+                
+
+        
+                
+                
+            </div>
+  
+          </div>
+  
+        </div>
+      </div><!-- End Portfolio Details -->
+    </main><!-- End #main -->
+  
+   <!-- Vendor JS Files -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+  
+    <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
+  
+  </body>
+  </html>
